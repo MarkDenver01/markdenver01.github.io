@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mark Denver Gregorio — Android & Kotlin Developer</title>
+<meta name="description" content="Freelance Android and Kotlin developer. App development, bug fixes, code review, and mentoring.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F4F0;
+    --panel:#FFFFFF;
+    --ink:#16233A;
+    --ink-soft:#4C5A70;
+    --line:#D8D6CE;
+    --blue:#2F5D8A;
+    --blue-deep:#1B3A5C;
+    --amber:#E0932E;
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+    --sans:'IBM Plex Sans', -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:880px;margin:0 auto;padding:0 28px;}
+
+  /* header */
+  header{
+    border-bottom:1px solid var(--line);
+    background:var(--paper);
+  }
+  .header-inner{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:22px 28px;max-width:880px;margin:0 auto;
+  }
+  .logo{
+    font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:-0.02em;
+  }
+  nav{display:flex;gap:28px;}
+  nav a{font-size:14px;color:var(--ink-soft);transition:color .15s;}
+  nav a:hover{color:var(--ink);}
+  nav a:focus-visible, .btn:focus-visible{outline:2px solid var(--blue);outline-offset:3px;}
+
+  /* hero */
+  .hero{padding:72px 0 56px;}
+  .status-line{
+    font-family:var(--mono);font-size:13px;color:var(--blue-deep);
+    background:var(--panel);border:1px solid var(--line);
+    display:inline-block;padding:7px 14px;border-radius:4px;
+    margin-bottom:28px;
+  }
+  .status-line .dot{
+    display:inline-block;width:7px;height:7px;border-radius:50%;
+    background:#3F9142;margin-right:8px;
+  }
+  h1{
+    font-size:clamp(32px,5vw,46px);
+    font-weight:600;
+    letter-spacing:-0.02em;
+    line-height:1.15;
+    max-width:14ch;
+    margin-bottom:20px;
+  }
+  .hero p{
+    font-size:17px;color:var(--ink-soft);max-width:52ch;margin-bottom:32px;
+  }
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    font-family:var(--sans);font-size:14px;font-weight:500;
+    padding:12px 22px;border-radius:4px;
+    border:1px solid var(--ink);
+    display:inline-block;transition:transform .1s ease, background .15s;
+  }
+  .btn-primary{background:var(--ink);color:var(--paper);}
+  .btn-primary:hover{background:var(--blue-deep);border-color:var(--blue-deep);}
+  .btn-ghost{border-color:var(--line);color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--ink);}
+  .btn:active{transform:scale(0.98);}
+
+  /* section shell */
+  section{padding:56px 0;border-top:1px solid var(--line);}
+  .section-head{
+    font-family:var(--mono);font-size:13px;color:var(--ink-soft);
+    margin-bottom:28px;
+  }
+
+  /* stack */
+  .stack-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--line);border:1px solid var(--line);
+  }
+  .stack-item{
+    background:var(--panel);padding:18px 20px;
+  }
+  .stack-item .name{font-weight:500;font-size:15px;margin-bottom:4px;}
+  .stack-item .desc{font-size:13px;color:var(--ink-soft);}
+
+  /* services */
+  .service-list{border-top:1px solid var(--line);}
+  .service{
+    display:grid;grid-template-columns:160px 1fr;gap:24px;
+    padding:22px 0;border-bottom:1px solid var(--line);
+  }
+  .service .tag{
+    font-family:var(--mono);font-size:12px;color:var(--blue);
+    padding-top:2px;
+  }
+  .service h3{font-size:17px;font-weight:600;margin-bottom:6px;}
+  .service p{font-size:14px;color:var(--ink-soft);max-width:48ch;}
+
+  /* process */
+  .process{
+    display:flex;flex-direction:column;gap:0;
+  }
+  .step{
+    display:flex;gap:18px;padding:16px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .step:last-child{border-bottom:none;}
+  .step .num{
+    font-family:var(--mono);font-size:13px;color:var(--ink-soft);
+    min-width:28px;
+  }
+  .step .body h4{font-size:15px;font-weight:500;margin-bottom:3px;}
+  .step .body p{font-size:13px;color:var(--ink-soft);}
+
+  /* contact */
+  .contact-panel{
+    background:var(--blue-deep);color:var(--paper);
+    border-radius:6px;padding:40px 32px;
+    display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;
+  }
+  .contact-panel h2{font-size:24px;font-weight:600;margin-bottom:10px;letter-spacing:-0.01em;}
+  .contact-panel p{color:#C6D3E2;font-size:14px;max-width:36ch;}
+  .contact-cta{display:flex;flex-direction:column;gap:10px;align-items:flex-start;}
+  .contact-cta a{
+    font-family:var(--mono);font-size:14px;
+    background:var(--amber);color:var(--blue-deep);
+    padding:11px 20px;border-radius:4px;font-weight:600;
+  }
+  .contact-cta .avail{font-size:12px;color:#9FB3C8;}
+
+  footer{
+    padding:28px 0 40px;font-size:13px;color:var(--ink-soft);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+
+  @media (max-width:640px){
+    .header-inner{padding:18px 20px;}
+    nav{gap:16px;}
+    .hero{padding:48px 0 40px;}
+    .hero p{font-size:16px;}
+    .stack-grid{grid-template-columns:1fr;}
+    .service{grid-template-columns:1fr;gap:6px;}
+    .contact-panel{padding:28px 22px;}
+    .contact-panel{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">mark.dev</div>
+    <nav>
+      <a href="#stack">Stack</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero" style="border-top:none;">
+    <div class="status-line"><span class="dot" aria-hidden="true"></span>Available for freelance — replies within 24h</div>
+    <h1>Android apps, built right and shipped on time.</h1>
+    <p>I'm Mark, a senior mobile engineer working in Android, Kotlin, Jetpack Compose, and Kotlin Multiplatform. I take on freelance builds, fixes, and reviews for teams that need production-quality mobile work.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Start a project</a>
+      <a href="#services" class="btn btn-ghost">See what I do</a>
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="section-head">// stack</div>
+    <div class="stack-grid">
+      <div class="stack-item"><div class="name">Android</div><div class="desc">Native, from scratch or existing codebases</div></div>
+      <div class="stack-item"><div class="name">Kotlin</div><div class="desc">Idiomatic, tested, maintainable</div></div>
+      <div class="stack-item"><div class="name">Jetpack Compose</div><div class="desc">Modern declarative UI</div></div>
+      <div class="stack-item"><div class="name">Kotlin Multiplatform</div><div class="desc">Shared logic across platforms</div></div>
+      <div class="stack-item"><div class="name">IoT integrations</div><div class="desc">Device connectivity, BLE, sensors</div></div>
+      <div class="stack-item"><div class="name">Cloud & backend</div><div class="desc">API integration, auth, sync</div></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-head">// services</div>
+    <div class="service-list">
+      <div class="service">
+        <div class="tag">build</div>
+        <div><h3>App development</h3><p>New Android apps or features, built with a clean architecture that's easy to hand off or maintain.</p></div>
+      </div>
+      <div class="service">
+        <div class="tag">fix</div>
+        <div><h3>Bug fixes & performance</h3><p>Crash triage, ANRs, memory leaks, and slow screens. Quick turnaround on scoped issues.</p></div>
+      </div>
+      <div class="service">
+        <div class="tag">review</div>
+        <div><h3>Code review & architecture</h3><p>A second pair of senior eyes on your codebase before it ships or scales.</p></div>
+      </div>
+      <div class="service">
+        <div class="tag">teach</div>
+        <div><h3>Mentoring</h3><p>1:1 sessions for developers leveling up in Android and Kotlin.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="section-head">// how it works</div>
+    <div class="process">
+      <div class="step"><div class="num">01</div><div class="body"><h4>Scope</h4><p>You describe the problem, I confirm scope and timeline before anything starts.</p></div></div>
+      <div class="step"><div class="num">02</div><div class="body"><h4>Build</h4><p>Work happens in milestones, with check-ins so nothing's a surprise.</p></div></div>
+      <div class="step"><div class="num">03</div><div class="body"><h4>Deliver</h4><p>You get working code, a short handoff note, and support after delivery.</p></div></div>
+    </div>
+  </section>
+
+  <section id="contact" style="border-bottom:none;">
+    <div class="contact-panel">
+      <div>
+        <h2>Let's build something.</h2>
+        <p>Send a note with what you need — I'll get back to you within a day.</p>
+      </div>
+      <div class="contact-cta">
+        <a href="mailto:hello@yourdomain.dev">hello@yourdomain.dev</a>
+        <span class="avail">Based in Manila, Philippines — open to remote work</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Mark Denver Gregorio</span>
+    <span>Android · Kotlin · Compose · KMP</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
