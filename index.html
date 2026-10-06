@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Mark Denver Gregorio — Senior Mobile Engineer</title>
-<meta name="description" content="Mark Denver Gregorio — senior mobile engineer and mobile tech lead. Android, Kotlin, Jetpack Compose and Kotlin Multiplatform. Available for freelance builds, fixes, reviews and mentoring.">
+<meta name="description" content="Mark Denver Gregorio — senior mobile engineer and mobile tech lead. Android, iOS, Kotlin, Jetpack Compose and Kotlin Multiplatform, IoT and AI-orchestrated engineering. Available for freelance builds, fixes and reviews.">
 <meta property="og:title" content="Mark Denver Gregorio — Senior Mobile Engineer">
-<meta property="og:description" content="Android, Kotlin, Jetpack Compose and Kotlin Multiplatform. Available for freelance builds, fixes, reviews and mentoring.">
+<meta property="og:description" content="Android, Kotlin, Jetpack Compose and Kotlin Multiplatform. Available for freelance builds, fixes and reviews.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://markdenver01.github.io/">
+<meta property="og:image" content="https://markdenver01.github.io/assets/profile.jpg">
 <meta name="theme-color" content="#0D0A19">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF7A45'/%3E%3Cstop offset='.5' stop-color='%23E8449F'/%3E%3Cstop offset='1' stop-color='%238B5CFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='900' font-size='34' text-anchor='middle' fill='%2314091F'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -248,6 +249,80 @@ footer{position:relative;z-index:1;padding-block:36px 48px;color:var(--muted);fo
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;background:var(--fg);color:var(--bg);font-weight:600;font-size:14px;padding:10px 18px;border-radius:999px;transition:opacity .2s,transform .2s;z-index:80;pointer-events:none}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 
+/* case studies: copy + a stage tinted with each product's own brand colours */
+.cases{display:grid;gap:clamp(24px,4vw,40px)}
+.case{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);border-radius:28px;background:var(--surface);border:1px solid var(--line);overflow:hidden}
+.case.flip .case-copy{order:2}
+.case-copy{padding:clamp(24px,3.5vw,44px);display:flex;flex-direction:column;justify-content:center;gap:16px;min-width:0}
+.case .links{margin-top:0}
+.case h3{font-size:clamp(28px,3.4vw,40px);font-weight:800}
+.case h3 small{display:block;font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.04em;color:var(--muted);margin-top:6px}
+.case-copy > p:not(.kicker){color:var(--muted);font-size:15.5px}
+.facts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.facts li{padding:12px 14px;border-radius:14px;background:var(--surface-2);border:1px solid var(--line)}
+.facts b{display:block;font-family:var(--display);font-size:20px;line-height:1.1;color:var(--b2)}
+.facts span{font-size:12px;color:var(--muted)}
+.stage{position:relative;min-width:0;padding:clamp(22px,3vw,36px) 0;background:
+  radial-gradient(120% 90% at 100% 0%,color-mix(in srgb,var(--b3) 45%,transparent),transparent 55%),
+  linear-gradient(150deg,var(--b1),var(--b2));display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.stage::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.18) 1px,transparent 1.2px);background-size:18px 18px;opacity:.5;pointer-events:none}
+.strip{position:relative;display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px clamp(22px,3vw,36px) 14px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.5) transparent}
+.dev{flex:0 0 auto;width:clamp(150px,15vw,186px);aspect-ratio:9/19;scroll-snap-align:center;padding:6px;border-radius:26px;border:0;background:#0B0B12;box-shadow:0 18px 40px -16px rgba(0,0,0,.6),inset 0 0 0 1px rgba(255,255,255,.12);cursor:zoom-in;transition:transform .25s ease}
+.dev img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:20px;background:#fff}
+.dev:nth-child(even){transform:translateY(18px)}
+.dev:hover{transform:translateY(-6px) rotate(-1deg)}
+.dev:nth-child(even):hover{transform:translateY(12px) rotate(1deg)}
+.stage-wide{padding:clamp(22px,3vw,36px);gap:14px}
+.window{position:relative;margin:0;border-radius:14px;overflow:hidden;background:#121018;box-shadow:0 24px 50px -18px rgba(0,0,0,.7),inset 0 0 0 1px rgba(255,255,255,.12)}
+.win-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#1C1828;font-family:var(--mono);font-size:11.5px;color:#C9C2E6}
+.win-bar i{width:10px;height:10px;border-radius:50%;background:#FF5F57}.win-bar i:nth-child(2){background:#FEBC2E}.win-bar i:nth-child(3){background:#28C840}
+.win-bar span{margin-left:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.win-shot{display:block;width:100%;padding:0;border:0;background:#000;cursor:zoom-in}
+.win-shot img{width:100%;aspect-ratio:16/11;object-fit:cover}
+.thumbs{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.thumbs button{padding:0;border-radius:10px;overflow:hidden;border:2px solid transparent;background:#000;cursor:pointer;opacity:.7;transition:opacity .15s,border-color .15s}
+.thumbs button img{width:100%;aspect-ratio:16/11;object-fit:cover}
+.thumbs button.on,.thumbs button:hover{opacity:1;border-color:var(--b3)}
+.lb{position:fixed;inset:0;z-index:90;background:rgba(6,4,14,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:calc(56px + env(safe-area-inset-top,0px)) 16px calc(24px + env(safe-area-inset-bottom,0px))}
+.lb img{max-width:min(100%,1100px);max-height:78vh;border-radius:18px;box-shadow:0 30px 80px -20px rgba(0,0,0,.8);object-fit:contain}
+.lb p{color:#EDE9FF;font-family:var(--mono);font-size:13px;margin:0}
+.lb .lb-btn{position:absolute;width:44px;height:44px;border-radius:14px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;font-size:20px;cursor:pointer;display:grid;place-items:center}
+.lb .lb-close{top:calc(14px + env(safe-area-inset-top,0px));right:16px}
+.lb .lb-prev{left:16px;top:50%;transform:translateY(-50%)}
+.lb .lb-next{right:16px;top:50%;transform:translateY(-50%)}
+.job-shot{float:right;width:84px;margin:0 0 10px 16px;border-radius:14px;overflow:hidden;border:1px solid var(--line);cursor:zoom-in;padding:0;background:none}
+.job-shot img{width:100%;aspect-ratio:9/16;object-fit:cover;object-position:top}
+@media (max-width:980px){
+  .case{grid-template-columns:minmax(0,1fr)}
+  .case.flip .case-copy{order:0}
+}
+@media (max-width:520px){
+  .facts{gap:6px}.facts li{padding:10px}.facts b{font-size:17px}.facts span{font-size:11px}
+  .dev{width:148px}
+  .thumbs{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+  .job-shot{width:64px}
+}
+@media (prefers-reduced-motion:reduce){.dev:nth-child(even){transform:none}}
+
+
+.roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.roles div{font-size:13px;color:var(--muted);padding:10px 12px;border-radius:12px;background:var(--surface-2);border:1px solid var(--line);min-width:0}
+.roles b{display:block;font-family:var(--mono);font-size:12px;color:var(--b2)}
+.pipe{padding:14px 16px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface-2)}
+.pipe-t{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.pipe ol{position:relative;list-style:none;margin:0;padding:0;display:flex;justify-content:space-between;gap:4px}
+.pipe ol::before{content:"";position:absolute;left:8px;right:8px;top:7px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--b1),var(--b2),var(--b3))}
+.pipe ol::after{content:"";position:absolute;top:3px;left:4px;width:10px;height:10px;border-radius:50%;background:var(--b3);box-shadow:0 0 0 4px color-mix(in srgb,var(--b3) 30%,transparent),0 0 14px var(--b3)}
+.pipe li{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;font-weight:500;color:var(--fg);text-align:center;min-width:0}
+.pipe li i{width:16px;height:16px;border-radius:50%;background:var(--surface);border:2px solid var(--b2);position:relative;z-index:1}
+@media (prefers-reduced-motion:no-preference){
+  .pipe ol::after{animation:travel 5s cubic-bezier(.6,0,.4,1) infinite}
+  .pipe li i{animation:light 5s infinite}
+  .pipe li:nth-child(2) i{animation-delay:1s}.pipe li:nth-child(3) i{animation-delay:2s}.pipe li:nth-child(4) i{animation-delay:3s}.pipe li:nth-child(5) i{animation-delay:4s}
+}
+@media (max-width:520px){.pipe li{font-size:10px}.roles div{font-size:12px}}
+@keyframes travel{0%{left:4px;opacity:0}6%{opacity:1}90%{left:calc(100% - 14px);opacity:1}100%{left:calc(100% - 14px);opacity:0}}
+@keyframes light{0%,14%{background:var(--b2);box-shadow:0 0 0 4px color-mix(in srgb,var(--b2) 25%,transparent)}22%,100%{background:var(--surface);box-shadow:none}}
 /* responsive */
 @media (max-width:980px){
   .hero-grid{grid-template-columns:minmax(0,1fr)}
@@ -324,7 +399,7 @@ footer{position:relative;z-index:1;padding-block:36px 48px;color:var(--muted);fo
       <div class="hero-copy">
         <div class="status"><span class="pulse" aria-hidden="true"></span>Available for freelance · replies within 24h</div>
         <h1><span class="line">Mobile apps</span><span class="line">that <span class="grad-text">ship</span>,</span><span class="line">and keep shipping.</span></h1>
-        <p class="lede">I'm <b>Mark Denver Gregorio</b>, a senior mobile engineer and tech lead with 10+ years in <b>Android, Kotlin, Jetpack Compose and Kotlin Multiplatform</b>. From BLE smart locks to fintech apps used by millions, I build mobile software that holds up in production.</p>
+        <p class="lede">I'm <b>Mark Denver Gregorio</b>, a senior mobile engineer and tech lead with 10+ years in <b>Android, iOS, Kotlin, Jetpack Compose and Kotlin Multiplatform</b>. From BLE smart locks to fintech apps used by millions, I build mobile software that holds up in production.</p>
         <div class="cta-row">
           <a class="btn btn-grad" href="#contact">Start a project
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -376,43 +451,43 @@ footer{position:relative;z-index:1;padding-block:36px 48px;color:var(--muted);fo
     <div class="wrap">
       <p class="eyebrow">Stack</p>
       <h2 class="sec-title">What I build <span class="grad-text">with</span></h2>
-      <p class="sec-lede">Native Android at the core, with the backend, cloud and device know-how to take a feature from the Bluetooth radio to the server and back.</p>
+      <p class="sec-lede">Native Android and iOS, cross-platform with Kotlin Multiplatform, plus the backend, cloud and IoT work behind them.</p>
       <div class="stack">
         <article class="tile" style="--c:var(--droid)">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div>
-          <h3>Android native</h3>
-          <p>Kotlin-first apps with Compose UI, built on Clean Architecture and MVVM so the next developer can pick them up.</p>
-          <div class="tags"><span>Kotlin</span><span>Java</span><span>Jetpack Compose</span><span>Android SDK</span><span>Room</span></div>
+          <h3>Android &amp; iOS native</h3>
+          <p>Kotlin and Compose on Android, Swift and SwiftUI on iOS, built on Clean Architecture and MVVM.</p>
+          <div class="tags"><span>Kotlin</span><span>Jetpack Compose</span><span>Swift</span><span>SwiftUI</span><span>Java</span><span>Room</span></div>
         </article>
         <article class="tile" style="--c:var(--k3)">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18L12 12 21 21H3z"/></svg></div>
           <h3>Kotlin Multiplatform</h3>
-          <p>Business logic shared across Android and iOS, with Compose Multiplatform where it pays off and Swift/SwiftUI where it doesn't.</p>
+          <p>I've built cross-platform apps with KMP: one shared Kotlin codebase for business logic, networking and data that runs on both Android and iOS, with Compose Multiplatform for shared UI.</p>
           <div class="tags"><span>KMP</span><span>Compose MP</span><span>Ktor</span><span>SwiftUI</span></div>
         </article>
         <article class="tile" style="--c:var(--k1)">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10-5 5V2l5 5L7 17"/></svg></div>
           <h3>IoT &amp; location</h3>
-          <p>Secure pairing, proximity unlock and real-time device control, shipped in market-released products.</p>
-          <div class="tags"><span>BLE</span><span>Bluetooth Mesh</span><span>NFC</span><span>Geofencing</span><span>MQTT</span></div>
+          <p>Years of hands-on work with Bluetooth Low Energy, NFC, geofencing, Nearby Device APIs and REST APIs, including a market-released smart lock app I led.</p>
+          <div class="tags"><span>BLE</span><span>NFC</span><span>Geofencing</span><span>Nearby APIs</span><span>REST</span><span>MQTT</span></div>
         </article>
         <article class="tile" style="--c:var(--k2)">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
           <h3>Backend &amp; APIs</h3>
-          <p>The services mobile apps talk to: secure, documented, and designed around the client that consumes them.</p>
-          <div class="tags"><span>Spring Boot</span><span>REST</span><span>GraphQL</span><span>JWT</span><span>PostgreSQL</span></div>
+          <p>I build the APIs my apps run on, then integrate them into the Android and iOS clients myself: Spring Boot services secured with JWT and OAuth, documented with OpenAPI, backed by PostgreSQL.</p>
+          <div class="tags"><span>Spring Boot</span><span>REST</span><span>GraphQL</span><span>OAuth / JWT</span><span>OpenAPI</span><span>PostgreSQL</span></div>
         </article>
         <article class="tile" style="--c:var(--k3)">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 1 0 6 16.9"/><path d="M12 13v8M9 18l3 3 3-3"/></svg></div>
           <h3>Cloud &amp; CI/CD</h3>
-          <p>Pipelines that lint, test and ship on every push, with distribution to testers before anything reaches the store.</p>
-          <div class="tags"><span>GCP</span><span>AWS</span><span>Firebase</span><span>GitHub Actions</span><span>Gradle</span></div>
+          <p>Every merge runs through GitHub Actions: lint, tests, static analysis, a container build, then deploy to Google Cloud Run. Secrets live in Secret Manager, and test builds go out on Firebase App Distribution before the store.</p>
+          <div class="tags"><span>GitHub Actions</span><span>Docker</span><span>Cloud Run</span><span>Cloud SQL</span><span>AWS</span><span>Firebase</span></div>
         </article>
         <article class="tile" style="--c:var(--k1)">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div>
-          <h3>AI-directed engineering</h3>
-          <p>Running multi-agent coding workflows with written runbooks, contracts and guardrails, so AI output meets the same bar as a senior team.</p>
-          <div class="tags"><span>Claude Code</span><span>Runbooks</span><span>Figma-to-code</span></div>
+          <h3>AI-orchestrated engineering</h3>
+          <p>I orchestrate multiple AI coding agents with spec-driven workflows: API contracts, architecture rules and runbooks the agents follow, CI quality gates on everything they write, and my review before anything merges.</p>
+          <div class="tags"><span>Agentic coding</span><span>Claude Code</span><span>Multi-agent</span><span>Spec-driven</span><span>MCP</span><span>Human-in-the-loop</span></div>
         </article>
       </div>
     </div>
@@ -422,65 +497,106 @@ footer{position:relative;z-index:1;padding-block:36px 48px;color:var(--muted);fo
     <div class="wrap">
       <p class="eyebrow">Selected work</p>
       <h2 class="sec-title">Things I've <span class="grad-text">shipped</span></h2>
-      <p class="sec-lede">A platform I'm building now, a commerce system delivered for a client, and six years of connected-device apps.</p>
-      <div class="work">
-        <article class="project feature">
-          <div class="shot" style="--g:linear-gradient(135deg,var(--k3),var(--k2))">
-            <div class="ph" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
-              <b>Aqora</b><small>real estate marketplace</small>
-            </div>
-            <img src="assets/aqora.jpg" alt="Aqora app screens" loading="lazy" onerror="this.remove()">
-          </div>
-          <div class="p-body">
-            <p class="kicker"><b>Co-founder &amp; technical director</b> · 2026 – present</p>
+      <p class="sec-lede">Products I've designed, built and shipped. Tap any screen to view it full size.</p>
+
+      <div class="cases">
+        <article class="case" style="--b1:#0B5A35;--b2:#17905B;--b3:#7BE0B0">
+          <div class="case-copy">
+            <p class="kicker"><b>Co-founder · full-stack developer</b> · 2026 – present</p>
             <h3>Aqora</h3>
-            <p>An AI-orchestrated real estate marketplace for the Philippines, split across 13 repositories: Kotlin Multiplatform apps for buyers, sellers, tenants and landlords, Spring Boot service modules, and a Next.js admin. I own the architecture and roadmap, and direct AI coding agents the way a tech lead directs a team.</p>
-            <div class="tech"><span>Kotlin Multiplatform</span><span>Compose MP</span><span>Spring Boot</span><span>Cloud Run</span><span>Next.js</span><span>GitHub Actions</span></div>
+            <p>An AI-powered real estate marketplace in the Philippines. I designed and built it end to end, from the mobile apps to the APIs and web admin, working with AI coding agents.</p>
+            <div class="roles">
+              <div><b>Buyers</b>Search listings, mortgage calculator</div>
+              <div><b>Sellers</b>List and manage properties</div>
+              <div><b>Tenants</b>Find rentals, track payments</div>
+              <div><b>Landlords</b>Manage units, AI insights</div>
+            </div>
+            <div class="pipe" aria-label="How Aqora is built: Figma design, AI agents build, CI checks, my review, then live on Cloud Run and the app stores">
+              <p class="pipe-t">How it gets built</p>
+              <ol>
+                <li><i></i>Figma</li>
+                <li><i></i>AI agents</li>
+                <li><i></i>CI checks</li>
+                <li><i></i>My review</li>
+                <li><i></i>Live</li>
+              </ol>
+            </div>
+            <div class="tech"><span>Kotlin Multiplatform</span><span>Spring Boot</span><span>Next.js</span><span>Cloud Run</span><span>Claude Code</span></div>
             <div class="links"><a href="https://github.com/aqora-dev" target="_blank" rel="noopener">github.com/aqora-dev ↗</a></div>
+          </div>
+          <div class="stage" data-gallery="aqora">
+            <div class="strip">
+              <button class="dev" type="button" data-src="assets/work/aqora-1.webp" data-cap="Aqora · Onboarding"><img src="assets/work/aqora-1.webp" alt="Aqora onboarding screen" loading="lazy"></button>
+              <button class="dev" type="button" data-src="assets/work/aqora-2.webp" data-cap="Aqora · Buyer home"><img src="assets/work/aqora-2.webp" alt="Aqora buyer home with featured properties" loading="lazy"></button>
+              <button class="dev" type="button" data-src="assets/work/aqora-3.webp" data-cap="Aqora · Property search"><img src="assets/work/aqora-3.webp" alt="Aqora property search results in Quezon City" loading="lazy"></button>
+              <button class="dev" type="button" data-src="assets/work/aqora-4.webp" data-cap="Aqora · Mortgage calculator"><img src="assets/work/aqora-4.webp" alt="Aqora mortgage calculator" loading="lazy"></button>
+              <button class="dev" type="button" data-src="assets/work/aqora-5.webp" data-cap="Aqora · AI assistant"><img src="assets/work/aqora-5.webp" alt="Aqora AI assistant chat" loading="lazy"></button>
+            </div>
           </div>
         </article>
 
-        <article class="project">
-          <div class="shot" style="--g:linear-gradient(135deg,var(--k1),var(--k2))">
-            <div class="ph" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
-              <b>Wrap &amp; Carry</b><small>omnichannel POS</small>
-            </div>
-            <img src="assets/wrap-carry.jpg" alt="Wrap and Carry POS screens" loading="lazy" onerror="this.remove()">
-          </div>
-          <div class="p-body">
-            <p class="kicker"><b>Freelance</b> · Jul – Nov 2025</p>
+        <article class="case flip" style="--b1:#14702F;--b2:#3FA34D;--b3:#F2C14E">
+          <div class="case-copy">
+            <p class="kicker"><b>Freelance · full stack</b> · Jul – Nov 2025</p>
             <h3>Wrap &amp; Carry</h3>
-            <p>A full POS ecosystem across mobile, web and backend, with real-time sync between online orders and in-store sales, Xendit payments and delivery tracking.</p>
-            <div class="tech"><span>Kotlin</span><span>Jetpack Compose</span><span>Spring Boot</span><span>JWT</span><span>Xendit</span></div>
+            <p>An omnichannel grocery and POS system built end to end for a client's capstone, with real-time order sync, Xendit payments and delivery tracking. I built the Android and iOS apps, the API and the web admin.</p>
+            <div class="tech"><span>Kotlin</span><span>Swift</span><span>Spring Boot</span><span>React + TypeScript</span><span>Xendit</span></div>
             <div class="links">
               <a href="https://github.com/MarkDenver01/carry_mobile_app" target="_blank" rel="noopener">mobile ↗</a>
               <a href="https://github.com/MarkDenver01/carrybackend" target="_blank" rel="noopener">backend ↗</a>
               <a href="https://github.com/MarkDenver01/carryfrontend" target="_blank" rel="noopener">frontend ↗</a>
             </div>
           </div>
+          <div class="stage" data-gallery="wc">
+            <div class="strip">
+              <button class="dev" type="button" data-src="assets/work/wc-1.webp" data-cap="Wrap &amp; Carry · Welcome"><img src="assets/work/wc-1.webp" alt="Wrap and Carry welcome screen" loading="lazy"></button>
+              <button class="dev" type="button" data-src="assets/work/wc-2.webp" data-cap="Wrap &amp; Carry · Home promo"><img src="assets/work/wc-2.webp" alt="Wrap and Carry home with promo" loading="lazy"></button>
+              <button class="dev" type="button" data-src="assets/work/wc-3.webp" data-cap="Wrap &amp; Carry · Delivery address"><img src="assets/work/wc-3.webp" alt="Wrap and Carry delivery address on a map" loading="lazy"></button>
+              <button class="dev" type="button" data-src="assets/work/wc-4.webp" data-cap="Wrap &amp; Carry · Cart"><img src="assets/work/wc-4.webp" alt="Wrap and Carry empty cart" loading="lazy"></button>
+            </div>
+          </div>
         </article>
 
-        <article class="project">
-          <div class="shot" style="--g:linear-gradient(135deg,var(--droid),var(--k3))">
-            <div class="ph" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10-5 5V2l5 5L7 17"/></svg>
-              <b>IoT apps</b><small>4 market releases</small>
-            </div>
-            <img src="assets/iot.jpg" alt="IoT device control app screens" loading="lazy" onerror="this.remove()">
-          </div>
-          <div class="p-body">
+        <article class="case" style="--b1:#0E6FA8;--b2:#2BB0EE;--b3:#F29A2E">
+          <div class="case-copy">
             <p class="kicker"><b>Tech lead · MinebeaMitsumi</b> · 2019 – 2025</p>
             <h3>IoT device control apps</h3>
-            <p>Technical lead for a family of Android and iOS apps released to market, built with Japanese engineering teams.</p>
+            <p>Android and iOS apps released to market in Japan. The flagship, SADIOT LOCK, locks and unlocks a smart door lock through a cloud API and Bluetooth Low Energy, with hands-free entry and shareable digital keys.</p>
             <div class="iot-list">
               <div><b>SADIOT</b>Smart door lock</div>
               <div><b>SALIOT</b>Smart lighting</div>
               <div><b>Bed Sensor</b>Healthcare monitoring</div>
               <div><b>Car Key</b>BLE / NFC unlock</div>
             </div>
-            <div class="tech"><span>BLE</span><span>Bluetooth Mesh</span><span>NFC</span><span>MQTT</span><span>AWS IoT</span></div>
+            <div class="tech"><span>BLE</span><span>Geofencing</span><span>NFC</span><span>AWS IoT</span><span>MQTT</span></div>
+          </div>
+          <div class="stage" data-gallery="sadiot">
+            <div class="strip">
+              <button class="dev" type="button" data-src="assets/work/sadiot-1.webp" data-cap="SADIOT LOCK · Registration"><img src="assets/work/sadiot-1.webp" alt="SADIOT LOCK registration screen" loading="lazy"></button>
+              <button class="dev" type="button" data-src="assets/work/sadiot-2.webp" data-cap="SADIOT LOCK · Locked"><img src="assets/work/sadiot-2.webp" alt="SADIOT LOCK showing locked state" loading="lazy"></button>
+              <button class="dev" type="button" data-src="assets/work/sadiot-3.webp" data-cap="SADIOT LOCK · Unlocked"><img src="assets/work/sadiot-3.webp" alt="SADIOT LOCK showing unlocked state" loading="lazy"></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="case flip game" style="--b1:#3A2F6B;--b2:#7461B8;--b3:#E9C46A">
+          <div class="case-copy">
+            <p class="kicker"><b>Co-founder · core developer</b> · passion project</p>
+            <h3>anRO <small>Artificial Network Ragnarok Online</small></h3>
+            <p>A Ragnarok Online server mixing Star Wars and Hunter x Hunter themes. I built the custom rAthena server, the client-side Padawan, Jedi and Sith classes, and the FluxCP website, and kept the database and network secure.</p>
+            <div class="tech"><span>rAthena</span><span>C++</span><span>NPC scripting</span><span>MySQL</span><span>FluxCP</span></div>
+          </div>
+          <div class="stage stage-wide" data-gallery="anro">
+            <figure class="window">
+              <div class="win-bar"><i></i><i></i><i></i><span id="anroCap">anRO · Padawan</span></div>
+              <button class="win-shot" type="button" id="anroMain" data-src="assets/work/anro-2.webp" data-cap="anRO · Padawan"><img src="assets/work/anro-2.webp" alt="anRO game screen, character as Padawan" loading="lazy"></button>
+            </figure>
+            <div class="thumbs" role="group" aria-label="anRO screenshots">
+              <button type="button" class="on" data-src="assets/work/anro-2.webp" data-cap="anRO · Padawan"><img src="assets/work/anro-2.webp" alt="Padawan" loading="lazy"></button>
+              <button type="button" data-src="assets/work/anro-3.webp" data-cap="anRO · Job change to Jedi"><img src="assets/work/anro-3.webp" alt="Job change to Jedi" loading="lazy"></button>
+              <button type="button" data-src="assets/work/anro-4.webp" data-cap="anRO · Job change to Sith"><img src="assets/work/anro-4.webp" alt="Job change to Sith" loading="lazy"></button>
+              <button type="button" data-src="assets/work/anro-1.webp" data-cap="anRO · Admin in town"><img src="assets/work/anro-1.webp" alt="Admin character in town" loading="lazy"></button>
+            </div>
           </div>
         </article>
       </div>
@@ -497,6 +613,7 @@ footer{position:relative;z-index:1;padding-block:36px 48px;color:var(--muted);fo
           <div class="when"><b>Mar 2026 – Present</b>Makati<br><span class="now-pill">Current</span></div>
           <div>
             <h3>Android Developer</h3>
+            <button class="job-shot" type="button" data-zoom data-src="assets/work/gcash.webp" data-cap="GCash app"><img src="assets/work/gcash.webp" alt="GCash app" loading="lazy"></button>
             <p class="org"><b>Encora</b> · for GCash (Mynt)</p>
             <ul>
               <li>Android features for payments, authentication and financial transactions</li>
@@ -509,7 +626,7 @@ footer{position:relative;z-index:1;padding-block:36px 48px;color:var(--muted);fo
         <article class="job" style="--c:var(--k1)">
           <div class="when"><b>Oct 2025 – Jan 2026</b>BGC, Taguig</div>
           <div>
-            <h3>Software Mobile Developer</h3>
+            <h3>Cross-Platform Mobile Developer Lead</h3>
             <p class="org"><b>Globe Telecom</b></p>
             <ul>
               <li>Enterprise mobile features in Kotlin, Compose, KMP and React Native</li>
@@ -561,10 +678,10 @@ footer{position:relative;z-index:1;padding-block:36px 48px;color:var(--muted);fo
       <h2 class="sec-title">How I can <span class="grad-text">help</span></h2>
       <p class="sec-lede">Freelance work for teams that need production-quality mobile engineering, from a single bug to a full build.</p>
       <div class="services">
-        <article class="svc" style="--c:var(--k1)"><span class="verb">Build</span><h3>App development</h3><p>New Android apps or features, built on a clean architecture that's easy to hand off or maintain.</p></article>
+        <article class="svc" style="--c:var(--k1)"><span class="verb">Build</span><h3>App development</h3><p>New Android and iOS apps or features, built on a clean architecture that's easy to hand off or maintain.</p></article>
         <article class="svc" style="--c:var(--k2)"><span class="verb">Fix</span><h3>Bugs &amp; performance</h3><p>Crash triage, ANRs, memory leaks and slow screens. Quick turnaround on scoped issues.</p></article>
         <article class="svc" style="--c:var(--k3)"><span class="verb">Review</span><h3>Code &amp; architecture</h3><p>A second pair of senior eyes on your codebase before it ships or scales.</p></article>
-        <article class="svc" style="--c:var(--droid)"><span class="verb">Teach</span><h3>Mentoring</h3><p>1:1 sessions for developers leveling up in Android and Kotlin.</p></article>
+        <article class="svc" style="--c:var(--droid)"><span class="verb">Explore</span><h3>R&amp;D &amp; prototypes</h3><p>New tech is what I enjoy most. I try AI agents, KMP and IoT early, and turn experiments into working prototypes.</p></article>
       </div>
       <div class="steps">
         <div class="step"><span class="n">01</span><h4>Scope</h4><p>You describe the problem. I confirm scope and timeline before any work starts.</p></div>
@@ -635,6 +752,38 @@ footer{position:relative;z-index:1;padding-block:36px 48px;color:var(--muted);fo
     var fallback=function(){var el=document.querySelector('.mail');var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);say('Email selected. Press Ctrl+C to copy');};
     if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(email).then(function(){say('Email copied');},fallback);}else{fallback();}
   });
+
+  // gallery + lightbox
+  var lb=null,list=[],idx=0,lastFocus=null;
+  function build(){
+    lb=document.createElement('div');lb.className='lb';lb.hidden=true;lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','Screenshot viewer');
+    lb.innerHTML='<button class="lb-btn lb-close" type="button" aria-label="Close">✕</button><button class="lb-btn lb-prev" type="button" aria-label="Previous">‹</button><img alt=""><p></p><button class="lb-btn lb-next" type="button" aria-label="Next">›</button>';
+    document.body.appendChild(lb);
+    lb.querySelector('.lb-close').onclick=close;
+    lb.querySelector('.lb-prev').onclick=function(){show(idx-1)};
+    lb.querySelector('.lb-next').onclick=function(){show(idx+1)};
+    lb.addEventListener('click',function(e){if(e.target===lb)close();});
+    document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowRight')show(idx+1);if(e.key==='ArrowLeft')show(idx-1);});
+  }
+  function show(i){idx=(i+list.length)%list.length;var it=list[idx];var img=lb.querySelector('img');img.src=it.src;img.alt=it.cap;lb.querySelector('p').textContent=it.cap+'  ·  '+(idx+1)+' / '+list.length;var many=list.length>1;lb.querySelector('.lb-prev').hidden=!many;lb.querySelector('.lb-next').hidden=!many;}
+  function open(items,i,from){if(!lb)build();list=items;lastFocus=from;lb.hidden=false;document.body.style.overflow='hidden';show(i);lb.querySelector('.lb-close').focus();}
+  function close(){lb.hidden=true;document.body.style.overflow='';if(lastFocus)lastFocus.focus();}
+  function itemsOf(nodes){return Array.prototype.map.call(nodes,function(n){return{src:n.getAttribute('data-src'),cap:n.getAttribute('data-cap')};});}
+  document.querySelectorAll('.strip').forEach(function(strip){
+    var devs=strip.querySelectorAll('.dev');var items=itemsOf(devs);
+    devs.forEach(function(d,i){d.addEventListener('click',function(){open(items,i,d);});});
+  });
+  document.querySelectorAll('[data-zoom]').forEach(function(b){b.addEventListener('click',function(){open([{src:b.getAttribute('data-src'),cap:b.getAttribute('data-cap')}],0,b);});});
+  var anroThumbs=document.querySelectorAll('.thumbs button'),anroMain=document.getElementById('anroMain'),anroCap=document.getElementById('anroCap');
+  if(anroMain){
+    var anroItems=itemsOf(anroThumbs);
+    anroThumbs.forEach(function(t,i){t.addEventListener('click',function(){
+      anroThumbs.forEach(function(x){x.classList.remove('on')});t.classList.add('on');
+      anroMain.setAttribute('data-src',t.getAttribute('data-src'));anroMain.setAttribute('data-cap',t.getAttribute('data-cap'));anroMain.dataset.i=i;
+      anroMain.querySelector('img').src=t.getAttribute('data-src');anroMain.querySelector('img').alt=t.getAttribute('data-cap');anroCap.textContent=t.getAttribute('data-cap');
+    });});
+    anroMain.addEventListener('click',function(){open(anroItems,+(anroMain.dataset.i||0),anroMain);});
+  }
 
   document.getElementById('year').textContent=new Date().getFullYear();
 })();
